@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-neutral-950 text-white font-sans;
+  }
+}
+
+.brutal-border {
+  border: 2px solid white;
+  box-shadow: 4px 4px 0px white;
+}
+
+.brutal-border-red {
+  border: 2px solid #ff0000;
+  box-shadow: 4px 4px 0px #ff0000;
+}
+
+@keyframes pulse-red {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+}
+
+.animate-pulse-red {
+  animation: pulse-red 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
